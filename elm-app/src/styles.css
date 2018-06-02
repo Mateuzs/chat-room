@@ -1,0 +1,233 @@
+/* src/styles.css */
+
+
+.navBarFont{
+
+  font-family: "Fira Code";
+  color: goldenrod;
+  font-size: 20px;
+  outline: none;
+  box-shadow : none;
+
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+}
+
+
+.navBar{
+
+    width: 100%;
+    height: 10%;
+    padding: 1%;
+    
+    background-color: #090808;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.navBar:focus, .navBar:active{
+ outline : none!important;
+ box-shadow : none!important;
+
+
+}
+
+.navBarBtn{
+
+  border: 2px solid goldenrod !important;
+  border-radius : 8px;
+  color : white;
+  background-color : black;
+  border: green;
+
+}
+
+.navBarBtn:focus{
+ outline : none!important;
+ box-shadow : none!important;
+
+
+}
+
+.navBarBtn:hover{
+  background-image: linear-gradient(to bottom, #7d3f26 0%, #32190f 100%);
+  border: 2px solid goldenrod;
+  border-radius : 8px;
+
+}
+
+.navBarBtn:active{
+ background: #af6d03  ;
+}
+
+
+/* HOME VIEW */
+
+.imageIntro{
+  height: 100%; 
+  width: 100%;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("Images/cowboySunSet.png");
+}
+
+.homeBlock{
+ width: 30%;
+ margin: 5% 0% 0% 55%;
+ padding: 20px;
+ border: 2px solid goldenrod ;
+ border-radius : 8px;
+ background-image: linear-gradient(to bottom, #7d3f26 0%, #32190f 100%);
+}
+
+.textHomeBlock {
+  text-align: center;
+  vertical-align : middle;
+  color : goldenrod;
+  font-family: "Fira Code";
+  font-weight: normal;
+  font-size: 20px;
+}
+
+/* CHAT VIEW */
+
+.imageChat{
+  height: 100%; 
+  width: 100%;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("Images/cowboy_chat.jpg");
+}
+
+
+.chatBlock{
+  width: 90%; 
+  text-align: center;
+  margin: auto;
+  padding: 1%;
+  border: 2px solid goldenrod ;
+  border-radius : 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 60%;
+}
+
+
+.liststyles {
+background-color: transparent;
+color: white;
+height: 90%;
+width: 100%;
+overflow-y: scroll;
+flex: 0 0 200px;
+
+}
+ .textChatBlock {
+  text-align: left;
+  vertical-align : middle;
+  color : white;
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+
+}
+
+.inputChatBlock {
+
+  width: 90%;
+  align-content: center;
+  text-align: center;
+  margin: 1% auto;
+  align-self: center;
+  padding: 5px;
+  border: 2px solid goldenrod ;
+  border-radius : 8px;
+  background-color: #D2B48C;
+
+}
+
+
+.inputField {
+
+  background-color: #e8ddcd;
+  width: 100%;
+  color : black;
+  font-family: "Fira Code";
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 2px solid goldenrod ;
+  padding: 5px;
+  align-self: right;
+
+}
+
+.inputText{
+  color : #6f5733;
+  font-family: "Fira Code";
+  font-weight: bold;
+  font-size: 20px;
+  background: transparent;
+}
+
+.inputField:focus {
+
+  outline : none!important;
+  box-shadow : none!important;
+  border: 2px solid #6f5733;
+  background: white;
+ 
+}
+
+.sendBtn{
+
+  border: 2px solid goldenrod !important;
+  border-radius : 8px;
+  color : white;
+  background-color : black;
+  font-family: "Fira Code";
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  margin: 15px;
+  width: 50%;
+  align-self: center;
+
+}
+
+
+.sendBtn:focus{
+  outline : none!important;
+  box-shadow : none!important;
+ 
+ 
+ }
+ 
+ .sendBtn:hover{
+   background-image: linear-gradient(to bottom, #7d3f26 0%, #32190f 100%);
+   border: 2px solid goldenrod;
+   border-radius : 8px;
+ 
+ }
+ 
+ .sendBtn:active{
+  background: #af6d03  ;
+ }
+ 
