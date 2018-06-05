@@ -1,18 +1,5 @@
-Chat example
+Elm-Erlang Chat App
 =================
+App allows to send messages between clients like a group forum or communicator, uses websockets and erlbus.
 
-To try this example, you need GNU `make` and `git` in your PATH.
-
-To build the example, run the following command:
-
-``` bash
-$ make
-```
-
-To start the example:
-
-``` bash
-$ make run
-```
-
-Then point your browser at [http://localhost:8080](http://localhost:8080).
+Client-side is written in elm, server-side uses erlang cowboy http server to handle  messages, subscription to the room and publishing messages to everyone. 
