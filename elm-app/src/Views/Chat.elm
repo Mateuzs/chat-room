@@ -100,7 +100,7 @@ all_posts : Model -> Html Msg
 all_posts model =
     div [class "chatBlock"]
         [ ul
-            [ class "list_ styles"
+            [ class "liststyles"
             , id "ul"
             ]
           <|

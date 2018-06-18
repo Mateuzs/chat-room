@@ -70,8 +70,7 @@
 }
 
 .navBarBtn:active{
- background: #af6d03  ;
-}
+  background-image: linear-gradient(to bottom, #32190f 0%, #7d3f26 100%);}
 
 
 /* HOME VIEW */
