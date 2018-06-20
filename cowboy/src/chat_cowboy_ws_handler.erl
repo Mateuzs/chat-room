@@ -18,40 +18,29 @@ init(_, _Req, _Opts) ->
 
 websocket_init(_Type, Req, _Opts) ->
   % Create the handler from our custom callback
-  Handler = ebus_proc:spawn_handler(fun chat_erlbus_handler:handle_msg/2, [self()]),
-  
+  Handler = ebus_proc:spawn_handler(fun chat_erlbus_handler:handle_msg/2, [self()]),  
   ebus:sub(Handler, ?CHATROOM_NAME),
   {ok, Req, #state{name = get_name(Req), handler = Handler}, ?TIMEOUT}.
 
 
-
-
-
 websocket_handle({text, Msg}, Req, State) ->
-
-{Sender_name, Sender_msg} = get_sender_data(Msg), 
-
-ebus:pub(?CHATROOM_NAME, {list_to_binary(Sender_name), list_to_binary(Sender_msg)}),
+  {Sender_name, Sender_msg} = get_sender_data(Msg), 
+  ebus:pub(?CHATROOM_NAME, {list_to_binary(Sender_name), list_to_binary(Sender_msg)}),
   {ok, Req, State};
-
-
-
-
-
 websocket_handle(_Data, Req, State) ->
   {ok, Req, State}.
 
+
 websocket_info({message_published, {Sender, Msg}}, Req, State) ->
   {reply, {text, jiffy:encode({[{sender, Sender}, {msg, Msg}]})}, Req, State};
-
 websocket_info(_Info, Req, State) ->
   {ok, Req, State}.
+
 
 websocket_terminate(_Reason, _Req, State) ->
   % Unsubscribe the handler
   ebus:unsub(State#state.handler, ?CHATROOM_NAME),
   ok.
-
 
 %% Private methods
 
@@ -62,6 +51,5 @@ get_name(Req) ->
   Name.
   
 get_sender_data(Msg) ->
-
-[UserName , Message] = string:tokens(binary_to_list(Msg), "#$:$#"),
-{UserName, Message}.
+  [UserName , Message] = string:tokens(binary_to_list(Msg), "#$:$#"),
+  {UserName, Message}.
